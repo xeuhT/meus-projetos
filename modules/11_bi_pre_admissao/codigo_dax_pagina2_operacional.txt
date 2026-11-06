@@ -1,0 +1,167 @@
+﻿Dashboard Operacional HTML = 
+VAR DataInicial = MIN ( Planilha1[ENVIO PARA PROCESSAMENTO] )
+VAR DataFinal = MAX ( Planilha1[ENVIO PARA PROCESSAMENTO] )
+VAR Periodo =
+    IF (
+        ISBLANK ( DataInicial ),
+        "Período Completo",
+        FORMAT ( DataInicial, "dd/MM/yyyy" ) & " a " & FORMAT ( DataFinal, "dd/MM/yyyy" )
+    )
+VAR TotalProcessos = [Total de Processos]
+VAR EmAndamento = [Processos em Andamento]
+VAR DocPendente = [Documentação Pendente]
+VAR MediaSLA = FORMAT([Média SLA Pré-Admissão], "0.0")
+
+VAR _CorPrimaria = "#0B3B60"
+VAR _CorVerde = "#10B981"
+VAR _CorAmarelo = "#F59E0B"
+VAR _CorVermelho = "#EF4444"
+
+RETURN
+"<!DOCTYPE html>
+<html>
+<head>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, sans-serif; }
+    body { background-color: #F4F6F9; padding: 20px 24px; color: #1E293B; height: 100vh; overflow-y: auto; }
+    
+    .header-bar {
+        display: flex; justify-content: space-between; align-items: center;
+        background: linear-gradient(135deg, " & _CorPrimaria & " 0%, #06233B 100%);
+        color: #FFFFFF; padding: 18px 26px; border-radius: 12px; margin-bottom: 18px;
+        box-shadow: 0 4px 14px rgba(11, 59, 96, 0.2);
+    }
+    .header-title { font-size: 22px; font-weight: 700; }
+    .header-sub { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+    .badge { background: rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+
+    .action-bar {
+        display: flex; justify-content: space-between; align-items: center;
+        background: #FFFFFF; padding: 14px 20px; border-radius: 10px; margin-bottom: 18px;
+        border: 1px solid #E2E8F0; box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .quick-filters { display: flex; gap: 8px; font-size: 12px; }
+    .filter-btn { padding: 6px 14px; border-radius: 6px; font-weight: 700; cursor: pointer; border: 1px solid #CBD5E1; background: #F8FAFC; color: #475467; }
+    .filter-btn.active { background: " & _CorPrimaria & "; color: #FFFFFF; border-color: " & _CorPrimaria & "; }
+
+    .table-container {
+        background: #FFFFFF; border-radius: 10px; padding: 20px;
+        border: 1px solid #E2E8F0; box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .table-title { font-size: 15px; font-weight: 700; color: " & _CorPrimaria & "; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
+    
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th { background: #F8FAFC; color: #64748B; padding: 12px 14px; font-weight: 700; text-align: left; border-bottom: 2px solid #E2E8F0; font-size: 11px; text-transform: uppercase; }
+    td { padding: 13px 14px; border-bottom: 1px solid #F1F5F9; }
+    tr:hover td { background: #F8FAFC; }
+    
+    .tag { padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; display: inline-block; }
+    .tag-green { background: #DEF7EC; color: #03543F; }
+    .tag-yellow { background: #FEF08A; color: #854D0E; }
+    .tag-red { background: #FDE8E8; color: #9B1C1C; }
+</style>
+</head>
+<body>
+
+    <div class='header-bar'>
+        <div>
+            <div class='header-title'>Fila Operacional de Atendimento & Triagem</div>
+            <div class='header-sub'>Cencosud Brasil &bull; Acompanhamento Candidato a Candidato &bull; " & Periodo & "</div>
+        </div>
+        <div class='badge'>Visão 2: Operação RH</div>
+    </div>
+
+    <!-- Barra de Atalhos -->
+    <div class='action-bar'>
+        <div class='quick-filters'>
+            <span style='font-weight:700; margin-right:8px; line-height:28px;'>Filtros Rápidos:</span>
+            <div class='filter-btn active'>Todos os Candidatos (" & FORMAT(TotalProcessos, "#,##0") & ")</div>
+            <div class='filter-btn'>Pendências de Documento (" & FORMAT(DocPendente, "#,##0") & ")</div>
+            <div class='filter-btn'>Em Andamento (" & FORMAT(EmAndamento, "#,##0") & ")</div>
+        </div>
+        <div style='font-size:12px; color:#64748B;'>
+            SLA Médio Geral: <b style='color:" & _CorPrimaria & ";'>" & MediaSLA & " dias</b>
+        </div>
+    </div>
+
+    <!-- Tabela Operacional Ampla -->
+    <div class='table-container'>
+        <div class='table-title'>
+            <span>Fila Diária de Candidatos para Admissão</span>
+            <span style='font-size:11px; font-weight:normal; color:#64748B;'>Legenda: 🔴 Crítico (> 7 dias ou Doc Pendente) | 🟡 Atenção | 🟢 No Prazo</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Prioridade</th>
+                    <th>Cód.</th>
+                    <th>Nome do Candidato</th>
+                    <th>Bandeira</th>
+                    <th>Cargo</th>
+                    <th>Setor / Loja</th>
+                    <th>Analista R&S</th>
+                    <th>Status Documentação</th>
+                    <th>Exame ASO</th>
+                    <th>Previsão Admissão</th>
+                    <th>Dias no Processo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class='tag tag-red'>🔴 CRÍTICO</span></td>
+                    <td>19437</td>
+                    <td><b>JOAO GABRIEL DA SILVA VITAL</b></td>
+                    <td>PREZUNIC</td>
+                    <td>OPERADOR DE PERECIVEIS</td>
+                    <td>LOJA-IOGURTES -730</td>
+                    <td>GILEIDE</td>
+                    <td><span class='tag tag-red'>PENDENTE</span></td>
+                    <td><span class='tag tag-yellow'>AGENDADO</span></td>
+                    <td>26/10/2026</td>
+                    <td><b style='color:#EF4444;'>8 dias</b></td>
+                </tr>
+                <tr>
+                    <td><span class='tag tag-yellow'>🟡 ATENÇÃO</span></td>
+                    <td>18373</td>
+                    <td><b>ANGELA SUARES DE OLIVEIRA</b></td>
+                    <td>BRETAS</td>
+                    <td>OPERADOR DE PERECIVEIS</td>
+                    <td>LOJA-CARNES -619</td>
+                    <td>EDJANE</td>
+                    <td><span class='tag tag-green'>COMPLETO</span></td>
+                    <td><span class='tag tag-green'>APTO</span></td>
+                    <td>04/11/2026</td>
+                    <td><b>5 dias</b></td>
+                </tr>
+                <tr>
+                    <td><span class='tag tag-green'>🟢 REGULAR</span></td>
+                    <td>19580</td>
+                    <td><b>NATHAN MENDES ALVES</b></td>
+                    <td>PREZUNIC</td>
+                    <td>OPERADOR DE CD</td>
+                    <td>CD-ADMINISTRATIVO-703</td>
+                    <td>GILEIDE</td>
+                    <td><span class='tag tag-green'>COMPLETO</span></td>
+                    <td><span class='tag tag-green'>APTO</span></td>
+                    <td>03/11/2026</td>
+                    <td><b>3 dias</b></td>
+                </tr>
+                <tr>
+                    <td><span class='tag tag-green'>🟢 REGULAR</span></td>
+                    <td>19940</td>
+                    <td><b>CINTIA MARIA DA SILVA</b></td>
+                    <td>GIGA</td>
+                    <td>FISCAL DE CAIXA I</td>
+                    <td>LOJA-FRENTE DE LOJA-914</td>
+                    <td>CRISTINA</td>
+                    <td><span class='tag tag-green'>COMPLETO</span></td>
+                    <td><span class='tag tag-green'>APTO</span></td>
+                    <td>21/10/2026</td>
+                    <td><b>2 dias</b></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>"

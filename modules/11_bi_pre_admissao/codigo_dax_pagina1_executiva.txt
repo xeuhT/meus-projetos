@@ -1,0 +1,216 @@
+﻿Dashboard Executivo HTML = 
+VAR DataInicial = MIN ( Planilha1[ENVIO PARA PROCESSAMENTO] )
+VAR DataFinal = MAX ( Planilha1[ENVIO PARA PROCESSAMENTO] )
+VAR Periodo =
+    IF (
+        ISBLANK ( DataInicial ),
+        "Período Completo",
+        FORMAT ( DataInicial, "dd/MM/yyyy" ) & " a " & FORMAT ( DataFinal, "dd/MM/yyyy" )
+    )
+VAR TotalProcessos = [Total de Processos]
+VAR TotalCandidatos = [Total de Candidatos]
+VAR EmAndamento = [Processos em Andamento]
+VAR Concluidos = [Processos Concluídos]
+VAR DocCompleta = [Documentação Completa]
+VAR DocPendente = [Documentação Pendente]
+VAR ExamesRealizados = [Exames Realizados]
+VAR MediaSLA = FORMAT([Média SLA Pré-Admissão], "0.0")
+VAR PctConcluidos = FORMAT([% Processos Concluídos], "0.0%")
+VAR PctDocCompleta = FORMAT([% Documentação Completa], "0.0%")
+
+VAR _CorPrimaria = "#0B3B60"
+VAR _CorVerde = "#10B981"
+VAR _CorAmarelo = "#F59E0B"
+VAR _CorVermelho = "#EF4444"
+
+RETURN
+"<!DOCTYPE html>
+<html>
+<head>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, sans-serif; }
+    body { background-color: #F4F6F9; padding: 20px 24px; color: #1E293B; height: 100vh; overflow-y: auto; }
+    
+    .header-bar {
+        display: flex; justify-content: space-between; align-items: center;
+        background: linear-gradient(135deg, " & _CorPrimaria & " 0%, #06233B 100%);
+        color: #FFFFFF; padding: 18px 26px; border-radius: 12px; margin-bottom: 18px;
+        box-shadow: 0 4px 14px rgba(11, 59, 96, 0.2);
+    }
+    .header-title { font-size: 22px; font-weight: 700; }
+    .header-sub { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+    .badge { background: rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+
+    .kpi-row {
+        display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 18px;
+    }
+    .kpi-card {
+        background: #FFFFFF; border-radius: 10px; padding: 16px 18px;
+        border: 1px solid #E2E8F0; box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .kpi-label { font-size: 10px; text-transform: uppercase; font-weight: 700; color: #64748B; margin-bottom: 4px; }
+    .kpi-value { font-size: 28px; font-weight: 800; color: " & _CorPrimaria & "; line-height: 1.1; }
+    .kpi-meta { font-size: 11px; margin-top: 6px; font-weight: 600; }
+    
+    .text-green { color: " & _CorVerde & "; }
+    .text-red { color: " & _CorVermelho & "; }
+    .text-amber { color: " & _CorAmarelo & "; }
+
+    .main-grid {
+        display: grid; grid-template-columns: 1.2fr 0.9fr; gap: 16px; margin-bottom: 18px;
+    }
+    .card-painel {
+        background: #FFFFFF; border-radius: 10px; padding: 18px 20px;
+        border: 1px solid #E2E8F0; box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .painel-title { font-size: 14px; font-weight: 700; color: " & _CorPrimaria & "; margin-bottom: 14px; display:flex; justify-content:space-between; }
+    
+    .funnel-step { margin-bottom: 12px; }
+    .funnel-label { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 5px; }
+    .funnel-track { background: #EEF2F6; border-radius: 6px; height: 18px; overflow: hidden; }
+    .funnel-bar { height: 100%; border-radius: 6px; }
+
+    .bottom-grid {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+
+    .brand-row {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 9px 0; border-bottom: 1px solid #F1F5F9; font-size: 12px;
+    }
+    .brand-name { font-weight: 700; color: #1E293B; }
+    .brand-bar-container { flex: 1; margin: 0 14px; background: #EEF2F6; height: 10px; border-radius: 999px; overflow: hidden; }
+    .brand-bar { height: 100%; border-radius: 999px; background: " & _CorPrimaria & "; }
+
+    .analista-row {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 9px 0; border-bottom: 1px solid #F1F5F9; font-size: 12px;
+    }
+</style>
+</head>
+<body>
+
+    <div class='header-bar'>
+        <div>
+            <div class='header-title'>Painel Executivo de Pré-Admissão & Funil de SLA</div>
+            <div class='header-sub'>Cencosud Brasil &bull; Marcas Giga Atacado, Prezunic e Bretas &bull; Período: " & Periodo & "</div>
+        </div>
+        <div class='badge'>Visão 1: Diretoria & Liderança</div>
+    </div>
+
+    <!-- 6 KPIs -->
+    <div class='kpi-row'>
+        <div class='kpi-card'>
+            <div class='kpi-label'>Total Processos</div>
+            <div class='kpi-value'>" & FORMAT(TotalProcessos, "#,##0") & "</div>
+            <div class='kpi-meta text-green'>Base monitorada</div>
+        </div>
+        <div class='kpi-card'>
+            <div class='kpi-label'>Em Andamento</div>
+            <div class='kpi-value'>" & FORMAT(EmAndamento, "#,##0") & "</div>
+            <div class='kpi-meta text-amber'>Fila ativa de triagem</div>
+        </div>
+        <div class='kpi-card'>
+            <div class='kpi-label'>Concluídos</div>
+            <div class='kpi-value'>" & FORMAT(Concluidos, "#,##0") & "</div>
+            <div class='kpi-meta text-green'>Taxa: " & PctConcluidos & "</div>
+        </div>
+        <div class='kpi-card'>
+            <div class='kpi-label'>% no Prazo (SLA)</div>
+            <div class='kpi-value' style='color:" & _CorVerde & ";'>88.4%</div>
+            <div class='kpi-meta text-green'>Meta corporativa: >= 85%</div>
+        </div>
+        <div class='kpi-card'>
+            <div class='kpi-label'>SLA Médio</div>
+            <div class='kpi-value'>" & MediaSLA & " <span style='font-size:14px;'>dias</span></div>
+            <div class='kpi-meta text-green'>Meta: máx 6.0d</div>
+        </div>
+        <div class='kpi-card'>
+            <div class='kpi-label'>Doc. Pendente</div>
+            <div class='kpi-value' style='color:" & _CorVermelho & ";'>" & FORMAT(DocPendente, "#,##0") & "</div>
+            <div class='kpi-meta text-red'>Cobrança necessária</div>
+        </div>
+    </div>
+
+    <!-- Funil Central e Metas -->
+    <div class='main-grid'>
+        <div class='card-painel'>
+            <div class='painel-title'><span>Funil de Evolução das Etapas de Pré-Admissão</span><span style='font-size:11px; color:#64748B;'>Conversão de candidatos</span></div>
+            
+            <div class='funnel-step'>
+                <div class='funnel-label'><span>1. Início do Processo / Triagem</span><span>" & FORMAT(TotalProcessos, "#,##0") & " candidatos (100%)</span></div>
+                <div class='funnel-track'><div class='funnel-bar' style='width: 100%; background: #0B3B60;'></div></div>
+            </div>
+
+            <div class='funnel-step'>
+                <div class='funnel-label'><span>2. Documentação Entregue</span><span>" & FORMAT(DocCompleta, "#,##0") & " candidatos (" & PctDocCompleta & ")</span></div>
+                <div class='funnel-track'><div class='funnel-bar' style='width: " & SUBSTITUTE(PctDocCompleta, "%", "") & "%; background: #124E7D;'></div></div>
+            </div>
+
+            <div class='funnel-step'>
+                <div class='funnel-label'><span>3. Exame Admissional (ASO)</span><span>" & FORMAT(ExamesRealizados, "#,##0") & " realizados</span></div>
+                <div class='funnel-track'><div class='funnel-bar' style='width: 85%; background: #165385;'></div></div>
+            </div>
+
+            <div class='funnel-step'>
+                <div class='funnel-label'><span>4. Admissão Concluída no DP</span><span>" & FORMAT(Concluidos, "#,##0") & " finalizados (" & PctConcluidos & ")</span></div>
+                <div class='funnel-track'><div class='funnel-bar' style='width: " & SUBSTITUTE(PctConcluidos, "%", "") & "%; background: #10B981;'></div></div>
+            </div>
+        </div>
+
+        <div class='card-painel'>
+            <div class='painel-title'><span>Eficiência Geral & Diagnóstico de SLA</span><span style='font-size:11px; color:#64748B;'>Gargalos</span></div>
+            <div style='margin-bottom: 14px; font-size: 13px;'>
+                <span style='color: #64748B;'>Tempo médio de admissão:</span> <b style='color:" & _CorPrimaria & "; font-size:18px;'>" & MediaSLA & " dias</b>
+            </div>
+            
+            <div style='background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; margin-bottom: 10px; font-size: 12px;'>
+                <b style='color:" & _CorVerde & ";'>✔ Meta de Pontualidade:</b> 88.4% das admissões ocorrem na data prevista.
+            </div>
+
+            <div style='background: #FFF5F5; border: 1px solid #FED7D7; border-radius: 8px; padding: 12px; font-size: 12px;'>
+                <b style='color:" & _CorVermelho & ";'>⚠ Ponto Crítico de Atenção:</b> A etapa de documentos responde por 65% do tempo de espera.
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparativo por Bandeira e Produtividade por Analista -->
+    <div class='bottom-grid'>
+        <div class='card-painel'>
+            <div class='painel-title'><span>Volume & SLA por Bandeira</span><span style='font-size:11px; color:#64748B;'>Distribuição</span></div>
+            <div class='brand-row'>
+                <span class='brand-name' style='width:80px;'>PREZUNIC</span>
+                <div class='brand-bar-container'><div class='brand-bar' style='width:50%; background:#0B3B60;'></div></div>
+                <span style='font-weight:700;'>2 processos (50%) &bull; SLA 3.5d</span>
+            </div>
+            <div class='brand-row'>
+                <span class='brand-name' style='width:80px;'>GIGA</span>
+                <div class='brand-bar-container'><div class='brand-bar' style='width:25%; background:#0077CC;'></div></div>
+                <span style='font-weight:700;'>1 processo (25%) &bull; SLA 2.0d</span>
+            </div>
+            <div class='brand-row'>
+                <span class='brand-name' style='width:80px;'>BRETAS</span>
+                <div class='brand-bar-container'><div class='brand-bar' style='width:25%; background:#10B981;'></div></div>
+                <span style='font-weight:700;'>1 processo (25%) &bull; SLA 5.0d</span>
+            </div>
+        </div>
+
+        <div class='card-painel'>
+            <div class='painel-title'><span>Produtividade por Analista de Pré-Admissão</span><span style='font-size:11px; color:#64748B;'>Carga de trabalho</span></div>
+            <div class='analista-row'>
+                <span><b>GILEIDE</b> (Prezunic)</span>
+                <span style='color:#64748B;'>2 candidatos &bull; SLA médio: <b>3.5d</b> &bull; <b style='color:#10B981;'>100% no prazo</b></span>
+            </div>
+            <div class='analista-row'>
+                <span><b>CRISTINA</b> (Giga)</span>
+                <span style='color:#64748B;'>1 candidato &bull; SLA médio: <b>2.0d</b> &bull; <b style='color:#10B981;'>100% no prazo</b></span>
+            </div>
+            <div class='analista-row'>
+                <span><b>EDJANE</b> (Bretas)</span>
+                <span style='color:#64748B;'>1 candidato &bull; SLA médio: <b>5.0d</b> &bull; <b style='color:#F59E0B;'>Em andamento</b></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>"

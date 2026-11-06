@@ -1,0 +1,921 @@
+[
+  {
+    "matricula": 10001,
+    "cpf_origem": "00000000001",
+    "nome_origem": "COLABORADOR AFASTADO 01",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.001-00",
+      "nome": "Colaborador Afastado 01",
+      "nome_mae": "Mae Colaborador 01",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 01",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "24/04/1974",
+      "situacao_cadastral": "Titular falecido",
+      "data_inscricao": "anterior a 10/11/1990",
+      "uf": [
+        "SP"
+      ],
+      "digito_verificador": "03",
+      "comprovante": "B92B.4F26.7AD7.8BAB",
+      "idade": "52",
+      "ano_obito": "2025",
+      "Comprovantes": {
+        "digito_verificador": "03",
+        "codigo_controle": "B92B.4F26.7AD7.8BAB",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:15:24",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1",
+      "qsa": [
+        {
+          "cnpj": "00.000.000/0001-00",
+          "razao_social": "EMPRESA EXEMPLO 01 LTDA",
+          "matriz_filial": "Matriz",
+          "situacao_cadastral": "Baixada",
+          "qualificacao": {
+            "codigo": "49",
+            "descricao": "Sócio-Administrador"
+          },
+          "data_entrada": "19/06/2009"
+        }
+      ]
+    }
+  },
+  {
+    "matricula": 10002,
+    "cpf_origem": "00000000002",
+    "nome_origem": "COLABORADOR AFASTADO 02",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.002-00",
+      "nome": "Colaborador Afastado 02",
+      "nome_mae": "Mae Colaborador 02",
+      "data_nascimento": "02/11/1972",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "01/11/1992",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "idade": "53",
+      "ano_obito": "",
+      "comprovante": "A907.8990.8E20.1D08",
+      "Comprovantes": {
+        "arquivo": {
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        },
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr"
+      }
+    }
+  },
+  {
+    "matricula": 10003,
+    "cpf_origem": "00000000003",
+    "nome_origem": "COLABORADOR AFASTADO 03",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.003-00",
+      "nome": "Colaborador Afastado 03",
+      "data_nascimento": "22/05/1974",
+      "situacao_cadastral": "Regular",
+      "idade": "51",
+      "ano_obito": "",
+      "nome_mae": "Mae Colaborador 03"
+    }
+  },
+  {
+    "matricula": 10004,
+    "cpf_origem": "00000000004",
+    "nome_origem": "COLABORADOR AFASTADO 04",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.004-00",
+      "nome": "Colaborador Afastado 04",
+      "nome_mae": "Mae Colaborador 04",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 04",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "29/03/1977",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "09/12/1995",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "CF4C.244C.0DAB.F1FD",
+      "idade": "49",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "CF4C.244C.0DAB.F1FD",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:27:36",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10005,
+    "cpf_origem": "00000000005",
+    "nome_origem": "COLABORADOR AFASTADO 05",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.005-00",
+      "nome": "Colaborador Afastado 05",
+      "nome_mae": "Mae Colaborador 05",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 05",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "13/11/1974",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "20/02/1991",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "D35E.110E.0084.1236",
+      "idade": "51",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "D35E.110E.0084.1236",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:27:43",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10006,
+    "cpf_origem": "00000000006",
+    "nome_origem": "COLABORADOR AFASTADO 06",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.006-00",
+      "nome": "Colaborador Afastado 06",
+      "nome_mae": "Mae Colaborador 06",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 06",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "26/03/1975",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "01/11/1999",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "E822.202E.3470.36B4",
+      "idade": "51",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "E822.202E.3470.36B4",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:05",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10007,
+    "cpf_origem": "00000000007",
+    "nome_origem": "COLABORADOR AFASTADO 07",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.007-00",
+      "nome": "Colaborador Afastado 07",
+      "nome_mae": "Mae Colaborador 07",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 07",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "22/11/1983",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "10/08/2000",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "5D48.1290.F0BB.1398",
+      "idade": "42",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "5D48.1290.F0BB.1398",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:12",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10008,
+    "cpf_origem": "00000000008",
+    "nome_origem": "COLABORADOR AFASTADO 08",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.008-00",
+      "nome": "Colaborador Afastado 08",
+      "nome_mae": "Mae Colaborador 08",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 08",
+        "sexo": "M",
+        "transicao_genero": false
+      },
+      "data_nascimento": "31/03/1979",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "19/10/1996",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "3BD5.67CE.EBAA.E52B",
+      "idade": "47",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "3BD5.67CE.EBAA.E52B",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:18",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10009,
+    "cpf_origem": "00000000009",
+    "nome_origem": "COLABORADOR AFASTADO 09",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.009-00",
+      "nome": "Colaborador Afastado 09",
+      "nome_mae": "Mae Colaborador 09",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 09",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "14/09/1983",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "02/05/2001",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "F991.997F.81BE.A481",
+      "idade": "43",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "F991.997F.81BE.A481",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:24",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10010,
+    "cpf_origem": "00000000010",
+    "nome_origem": "COLABORADOR AFASTADO 10",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.010-00",
+      "nome": "Colaborador Afastado 10",
+      "nome_mae": "Mae Colaborador 10",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 10",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "20/08/1969",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "27/11/2000",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "80A8.1F28.E0F4.BEC3",
+      "idade": "57",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "80A8.1F28.E0F4.BEC3",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:29",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10011,
+    "cpf_origem": "00000000011",
+    "nome_origem": "COLABORADOR AFASTADO 11",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.011-00",
+      "nome": "Colaborador Afastado 11",
+      "nome_mae": "Mae Colaborador 11",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 11",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "14/05/1969",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "anterior a 10/11/1990",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "E002.8F4B.B5B3.FA64",
+      "idade": "57",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "E002.8F4B.B5B3.FA64",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:35",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10012,
+    "cpf_origem": "00000000012",
+    "nome_origem": "COLABORADOR AFASTADO 12",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.012-00",
+      "nome": "Colaborador Afastado 12",
+      "nome_mae": "Mae Colaborador 12",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 12",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "11/05/1987",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "05/04/2005",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "A7EA.B9A3.9286.5564",
+      "idade": "39",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "A7EA.B9A3.9286.5564",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:41",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10013,
+    "cpf_origem": "00000000013",
+    "nome_origem": "COLABORADOR AFASTADO 13",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.013-00",
+      "nome": "Colaborador Afastado 13",
+      "nome_mae": "Mae Colaborador 13",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 13",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "11/06/1979",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "23/07/1998",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "9C4A.9797.5B2F.DCF0",
+      "idade": "47",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "9C4A.9797.5B2F.DCF0",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:47",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10014,
+    "cpf_origem": "00000000014",
+    "nome_origem": "COLABORADOR AFASTADO 14",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.014-00",
+      "nome": "Colaborador Afastado 14",
+      "nome_mae": "Mae Colaborador 14",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 14",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "18/12/1975",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "12/08/1998",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "A2B4.19E9.3D46.AB22",
+      "idade": "50",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "A2B4.19E9.3D46.AB22",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:28:53",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10015,
+    "cpf_origem": "00000000015",
+    "nome_origem": "COLABORADOR AFASTADO 15",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.015-00",
+      "nome": "Colaborador Afastado 15",
+      "nome_mae": "Mae Colaborador 15",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 15",
+        "sexo": "M",
+        "transicao_genero": false
+      },
+      "data_nascimento": "26/06/1973",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "18/11/1993",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "E199.469D.4D42.6B39",
+      "idade": "53",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "E199.469D.4D42.6B39",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:29:23",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10016,
+    "cpf_origem": "00000000016",
+    "nome_origem": "COLABORADOR AFASTADO 16",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.016-00",
+      "nome": "Colaborador Afastado 16",
+      "nome_mae": "Mae Colaborador 16",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 16",
+        "sexo": "",
+        "transicao_genero": false
+      },
+      "data_nascimento": "25/05/1983",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "21/01/2004",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "C39C.7C72.1D63.151C",
+      "idade": "43",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "C39C.7C72.1D63.151C",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:29:43",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10017,
+    "cpf_origem": "00000000017",
+    "nome_origem": "COLABORADOR AFASTADO 17",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.017-00",
+      "nome": "Colaborador Afastado 17",
+      "nome_mae": "Mae Colaborador 17",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 17",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "24/03/1976",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "19/10/1992",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "BCB1.A916.F406.FB52",
+      "idade": "50",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "BCB1.A916.F406.FB52",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:29:49",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10018,
+    "cpf_origem": "00000000018",
+    "nome_origem": "COLABORADOR AFASTADO 18",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.018-00",
+      "nome": "Colaborador Afastado 18",
+      "nome_mae": "Mae Colaborador 18",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 18",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "05/01/1989",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "07/02/2007",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "CDCE.4678.E8CA.EAB6",
+      "idade": "37",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "CDCE.4678.E8CA.EAB6",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:29:56",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10019,
+    "cpf_origem": "00000000019",
+    "nome_origem": "COLABORADOR AFASTADO 19",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.019-00",
+      "nome": "Colaborador Afastado 19",
+      "nome_mae": "Mae Colaborador 19",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 19",
+        "sexo": "M",
+        "transicao_genero": false
+      },
+      "data_nascimento": "01/03/1960",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "anterior a 10/11/1990",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "3DE3.9B87.19CC.480D",
+      "idade": "66",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "3DE3.9B87.19CC.480D",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:30:05",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10020,
+    "cpf_origem": "00000000020",
+    "nome_origem": "COLABORADOR AFASTADO 20",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.020-00",
+      "nome": "Colaborador Afastado 20",
+      "nome_mae": "Mae Colaborador 20",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 20",
+        "sexo": "M",
+        "transicao_genero": false
+      },
+      "data_nascimento": "20/06/2003",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "17/11/2004",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "309C.1784.3AA3.88B2",
+      "idade": "23",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "309C.1784.3AA3.88B2",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:30:11",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10021,
+    "cpf_origem": "00000000021",
+    "nome_origem": "COLABORADOR AFASTADO 21",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.021-00",
+      "nome": "Colaborador Afastado 21",
+      "nome_mae": "Mae Colaborador 21",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 21",
+        "sexo": "M",
+        "transicao_genero": false
+      },
+      "data_nascimento": "20/05/1984",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "21/05/2002",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "845C.7ECE.FA24.453E",
+      "idade": "42",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "845C.7ECE.FA24.453E",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:30:17",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  },
+  {
+    "matricula": 10022,
+    "cpf_origem": "00000000022",
+    "nome_origem": "COLABORADOR AFASTADO 22",
+    "nasc_origem": "01/01/1980",
+    "json": {
+      "code": "0",
+      "status": "OK",
+      "message": "Pesquisa realizada com sucesso.",
+      "cpf": "000.000.022-00",
+      "nome": "Colaborador Afastado 22",
+      "nome_mae": "Mae Colaborador 22",
+      "genero": {
+        "nome_social": null,
+        "nome_civil": "Colaborador Afastado 22",
+        "sexo": "F",
+        "transicao_genero": false
+      },
+      "data_nascimento": "10/07/2002",
+      "situacao_cadastral": "Regular",
+      "data_inscricao": "15/06/2015",
+      "uf": [
+        "BA",
+        "SE"
+      ],
+      "digito_verificador": "00",
+      "comprovante": "F9C6.9E32.1F6A.AFF5",
+      "idade": "24",
+      "ano_obito": "",
+      "qsa": [],
+      "Comprovantes": {
+        "digito_verificador": "00",
+        "codigo_controle": "F9C6.9E32.1F6A.AFF5",
+        "qrcode": "https://sintegraws.com.br/api/v1/mock-qr",
+        "data_consulta": "28/09/2026 09:30:23",
+        "arquivo": {
+          "extensao": "pdf",
+          "url": "https://sintegraws.com.br/api/v1/mock-pdf"
+        }
+      },
+      "version": "1"
+    }
+  }
+]

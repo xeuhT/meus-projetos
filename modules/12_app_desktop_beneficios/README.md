@@ -3,26 +3,65 @@
 ![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
 ![UI](https://img.shields.io/badge/GUI-CustomTkinter-blue)
 
-## 📌 Objetivo do Módulo
-Aplicação desktop com interface moderna e amigável desenvolvida em CustomTkinter para permitir que analistas de RH e Departamento Pessoal operem auditorias de benefícios de saúde e odontologia (SulAmérica, GNDI, Hapvida, Unimed, OdontoPrev) sem necessidade de comandos em terminal ou conhecimento técnico de programação.
+## 📌 Visão Geral & Pipeline Modular
+Pipeline em Python e interface CustomTkinter para auditar faturamento de operadoras de saúde/odonto contra movimentações do RH.
 
-## ⚙️ Funcionalidades da Interface
-* **Seleção Visual de Arquivos:** Seleção intuitiva de faturas de operadoras e arquivos de folha via diálogos do sistema.
-* **Execução em Thread Separada:** Processamento não-bloqueante com barra de progresso em tempo real e console integrado de telemetria.
-* **Exportação com 1 Clique:** Geração automatizada de relatórios em Excel com formatação executiva condicional.
-* **Documentação Técnica Completa:** Manual técnico operacional incluso ([Manual Técnico AD002 V003](Manual_Tecnico_AD002_V003.pdf)).
+## Estrutura
 
-## 📂 Arquivos do Módulo
-* `app_beneficios.py`: Aplicação desktop principal em CustomTkinter.
-* `leitores.py`: Ingestão de múltiplos formatos de faturas de operadoras de saúde e odonto.
-* `motor_auditoria.py`: Motor de confronto cadastral e financeiro.
-* `exportador.py`: Formatação e estilização de relatórios em Excel.
-* `config.py`: Definições visuais, paletas de cores e configurações operacionais.
-* `utils.py`: Formatadores de moeda, strings e validação de CPFs.
-* `logo.png`: Identidade visual da aplicação.
-* `Manual_Tecnico_AD002_V003.pdf`: Documentação técnica detalhada de operação e regras.
+| Arquivo | Função |
+|---|---|
+| `config.py` | Mapeamento de colunas das 7 operadoras + Colaboradores + Demitidos. **Mudou layout? Mexa só aqui.** |
+| `utils.py` | Funções utilitárias: limpar/validar/formatar CPF, normalizar nome, parse de data |
+| `leitores.py` | Lê cada planilha e devolve DataFrame com colunas padronizadas em snake_case |
+| `motor_auditoria.py` | Merge em cascata: CPF → matrícula → nome. Gera o consolidado |
+| `exportador.py` | Gera XLSX final formatado (CPF como texto, datas DD/MM/AAAA, aba Resumo) |
+| `main.py` | Ponto de entrada. Descobre arquivos na pasta, orquestra tudo |
 
-## 🚀 Como Executar
+## Dependências
+
 ```bash
-python app_beneficios.py
+pip install pandas openpyxl
 ```
+
+## Uso
+
+1. Coloque todas as planilhas numa pasta (qualquer estrutura), garantindo que o nome contém a operadora:
+   - `Listagem de Ativos - Bradesco Odonto - Maio_2026.xlsx`
+   - `Movimentações Fopag - HAPVIDA_Maio_2026.xlsx`
+   - `COLA_Colaboradores_CSV - 18052026.xlsx`
+   - `Demitidos_01.05.2026_ate_18.05.2026.CSV`
+
+2. Rode:
+   ```bash
+   python main.py "C:\auditoria\entrada"
+   ```
+   Ou especificando saída:
+   ```bash
+   python main.py "C:\auditoria\entrada" "C:\auditoria\saida.xlsx"
+   ```
+
+3. O log fica em `<pasta_entrada>/logs/auditoria_YYYYMMDD_HHMMSS.log`.
+
+## Saída
+
+XLSX com 2 abas:
+- **Consolidado**: 38 colunas com o cruzamento completo + flags de auditoria
+- **Resumo**: contagem por operadora, por status, e por flag crítica
+
+### Flags de auditoria
+
+| Flag | Significado |
+|---|---|
+| `FLAG_COBRANCA_INDEVIDA` | Cobrado ativo sem movimentação no Fopag |
+| `FLAG_DEMITIDO_AINDA_COBRADO` | Foi demitido mas continua na operadora |
+| `FLAG_SEM_CADASTRO_RH` | Cobrado mas nem está no cadastro do RH |
+| `FLAG_DEPENDENTE_SEM_TITULAR` | Dependente cobrado sem titular identificável |
+
+## Estratégia de merge (cascata)
+
+1. **CPF** (chave primária — mais confiável)
+2. O que sobrar → tenta por **matrícula**
+3. O que ainda sobrar → tenta por **nome normalizado** (sem acento, maiúsculo)
+4. O resto entra no relatório com `ORIGEM_MATCH = SEM_MATCH` — **nada é descartado em silêncio**
+
+Cada etapa loga quantos casaram e quantos sobraram. Se houver vazamento (entrada ≠ saída), aparece `ERROR: VAZAMENTO DE REGISTROS!` no log.
