@@ -218,3 +218,49 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==============================================================================
+# SEGURANÇA CORPORATIVA & LGPD (Cencosud HR Data Protection)
+# ==============================================================================
+# Planilhas e bases com dados de colaboradores (CPFs, nomes, salários, benefícios)
+*.xlsx
+*.xls
+*.xlsb
+*.csv
+~$*.xlsx
+~$*.xls
+~$*.xlsb
+
+# Arquivos de dados e extrações brutas de folha e operadoras
+input/
+output/
+dados/
+data/
+bases/
+relatorios/
+exports/
+temp/
+logs/
+*.log
+
+# Certificados Digitais e Chaves Privadas (e-CNPJ, A1, etc.)
+*.pfx
+*.p12
+*.cer
+*.crt
+*.key
+Certificados/
+certificados/
+
+# Credenciais, Tokens e Variáveis de Ambiente
+.env
+.env.local
+.env.*.local
+*.pem
+credentials*.json
+token*.json
+client_secret*.json
+
+# Executáveis locais gerados
+*.exe
+*.msi

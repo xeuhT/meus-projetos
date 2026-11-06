@@ -1,0 +1,37 @@
+# ==============================================================================
+# DEPENDÊNCIAS - ECOSSISTEMA DE ENGENHARIA DE DADOS & AUDITORIA DE RH
+# ==============================================================================
+
+# Manipulação, Tratamento e Análise de Dados
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Leitura e Exportação de Planilhas Excel / XLSB / CSV
+openpyxl>=3.1.2
+pyxlsb>=1.0.10
+xlrd>=2.0.1
+xlsxwriter>=3.1.9
+
+# Extração de Dados de Documentos e PDFs (OCR / TRCT / Rescisões)
+pdfplumber>=0.10.3
+pypdf>=3.17.0
+python-docx>=1.1.0
+
+# Automação Web e Interação com Portais (Conectividade Social / FGTS)
+selenium>=4.18.0
+webdriver-manager>=4.0.1
+
+# Requisições HTTP e Integrações com APIs REST (SintegraWS / InfoSimples)
+requests>=2.31.0
+urllib3>=2.0.0
+
+# Interfaces Gráficas Desktop (CustomTkinter)
+customtkinter>=5.2.0
+pillow>=10.2.0
+
+# Gerenciamento de Configurações e Variáveis de Ambiente
+python-dotenv>=1.0.1
+
+# Utilitários e Telemetria
+loguru>=0.7.2
+tqdm>=4.66.0
