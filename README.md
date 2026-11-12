@@ -31,21 +31,33 @@ A suíte foi desenhada para **erradicar pagamentos indevidos, eliminar glosas co
 
 A arquitetura do ecossistema é distribuída em **12 macroáreas modulares e auditadas**, totalizando 33 frentes operacionais específicas:
 
-| # | Macroárea | Escopo e Frentes Operacionais | Status do App Executável (.exe) / Interface | Horas Salvas / Mês |
+| # | Macroárea | Escopo e Frentes Operacionais | Status Oficial do App Executável / Interface | Horas Salvas / Mês |
 |:---:|:---|:---|:---:|:---:|
-| **01** | [🍱 Benefícios Corporativos (VA & VT)](modules/01_va_vt_18frentes/) | 18 frentes oficiais (Good Card, Compra VT, Teto 6%, Refeitório, Cencopay, Cesta Bretas) | 8 Frentes no `.exe` / 10 Frentes Entregues (aguardando validação final de regras) | **95,6h** |
-| **02** | [🏥 Gestão de Benefícios Multioperadoras](modules/02_beneficios_multioperadoras_5fontes/) | Cruzamento de 5 bases e 6 operadoras (Hapvida, SulAmérica, GNDI, Klini, Unimed, Bradesco Odonto) | ✅ **100% Concluído e em Uso Ativo** (App Desktop CustomTkinter) | **38,5h** |
+| **01** | [🍱 Benefícios Corporativos (VA & VT)](modules/01_va_vt_18frentes/) | 18 frentes oficiais (Good Card, Compra VT, Teto 6%, Refeitório, Cencopay, Cesta Bretas) | 8 Frentes no `.exe` (em teste) / 10 Frentes Entregues (aguardando validação de regras) | **95,6h** |
+| **02** | [🏥 Gestão de Benefícios Multioperadoras](modules/02_beneficios_multioperadoras_5fontes/) | Cruzamento mensal de 5 bases contra 6 operadoras (Hapvida, SulAmérica, GNDI, Klini, Unimed, Bradesco) | 🏆 **100% Concluído (App .exe em uso)** — Nenhuma pendência técnica | **38,5h** |
 | **03** | [💳 Pagadoria & Fluxo de Caixa RH](modules/03_pagadoria_fluxo_caixa/) | Carga SAP ZFI051 & Alçadas (17,5h) + Projeção Preditiva de Fluxo de Caixa RH (13,2h) | Motor funcional pronto (pendente ajuste na aba de rateio para gerar `.exe`) | **30,7h** |
 | **04** | [💰 Folha de Pagamento & Encargos](modules/04_folha_e_encargos/) | Malha fina de eventos, gratificações atípicas e divergências líquidas da folha | Entregue no SharePoint (aguardando Folhas Especiais para compilar `.exe`) | **42,0h** |
-| **05** | [🏖️ Gestão Integral de Férias](modules/05_auditoria_ferias/) | Motor v008 vetorial de 86 colunas (confronto recibo vs folha, médias e dobro CLT em 40 min) | ✅ **100% Concluído e em Uso Ativo pela Equipe** (Executável `.exe OneFile`) | **31,3h** |
-| **06** | [📄 Rescisão Trabalhista (*Shadow Calculation*)](modules/06_conciliacao_rescisao/) | Leitor OCR/Parser de PDFs de TRCTs (PDFPlumber) e auditoria matemática de verbas | ✅ **100% Concluído e em Uso Contínuo** na rotina diária da analista | **39,0h** |
+| **05** | [🏖️ Gestão Integral de Férias](modules/05_auditoria_ferias/) | Motor v008 vetorial de 86 colunas (confronto recibo vs folha, médias e dobro CLT em 40 min) | 🏆 **100% Concluído (App .exe em uso)** — Nenhuma pendência técnica e em uso contínuo | **31,3h** |
+| **06** | [📄 Rescisão Trabalhista (*Shadow Calculation*)](modules/06_conciliacao_rescisao/) | Leitor OCR/Parser de PDFs de TRCTs (PDFPlumber) e auditoria matemática de verbas | 🏆 **100% Concluído (App .exe em uso)** — Nenhuma pendência técnica e em uso diário | **39,0h** |
 | **07** | [🛡️ Compliance, SST & Afastados](modules/07_compliance_afastados/) | Robô SintegraWS para QSA/empresas ativas e óbitos (46,0h) + Auditoria INSS B91 (15,5h) | ✅ Laudo pericial em Word (.docx) e planilhas em produção | **61,5h** |
 | **08** | [🤝 Relações Sindicais & CCTs](modules/08_relacoes_sindicais/) | Robô de leitura de convenções coletivas no SharePoint e matriz de enquadramento | Entregue (aguardando validação para empacotar em `.exe`) | **15,7h** |
 | **09** | [⏱️ Ponto e Frequência](modules/09_ponto_e_frequencia/) | Auditoria de jornadas críticas (Art. 59 CLT), interjornada, atestados e DSR | Entregue (aguardando validação com a folha para compilar `.exe`) | **23,4h** |
-| **10** | [🌐 Operações & RPA Corporativo](modules/10_operacoes_rpa/) | Conectividade Social FGTS A1 (23,0h) + Ticket Plus (11,6h) + Seguro Vida MetLife (15,8h) | ✅ **100% Concluído** (RPA Selenium + App Seguro de Vida `.exe`) | **50,4h** |
-| **11** | [📋 Admissão & Cadastro (Censo Master)](modules/11_admissao_cadastro/) | Primeiro App Desktop em Python: auto-discovery de 6 relatórios LG e Salário Família | ✅ **100% Concluído e em Produção** (App Desktop Tkinter) | **17,5h** |
-| **12** | [📊 DHO & Recrutamento (Power BI)](modules/12_dho_recrutamento_powerbi/) | Dashboard Power BI em nuvem conectado ao SharePoint (Time-to-Hire, ASO e funil) | Em Validação Final / Homologação de colunas da planilha | **38,0h** |
+| **10** | [🌐 Operações & RPA Corporativo](modules/10_operacoes_rpa/) | Seguro de Vida MetLife 12x/24x (15,8h) + Conectividade Social FGTS (23h) + Ticket Plus (11,6h) | 🏆 **Seguro de Vida 100% Concluído (.exe)** / RPA Selenium entregue | **50,4h** |
+| **11** | [📋 Admissão & Cadastro (Censo Master)](modules/11_admissao_cadastro/) | Primeiro App Desktop em Python: auto-discovery de 6 relatórios LG e Salário Família | 🏆 **100% Concluído (App .exe em uso)** — Nenhuma pendência técnica e em uso contínuo | **17,5h** |
+| **12** | [📊 DHO & Recrutamento (Power BI)](modules/12_dho_recrutamento_powerbi/) | Dashboard Power BI em nuvem conectado ao SharePoint (Time-to-Hire, ASO e funil) | Aguardando Validação Final / Publicação Oficial (alinhamento de colunas) | **38,0h** |
 | **TOTAL** | **IMPACTO CONSOLIDADO DO ECOSSISTEMA** | **12 Macroáreas / 33 Frentes Operacionais Estruturadas** | **87,2% de Redução Média de Esforço Operacional** | **483,6h / mês** |
+
+---
+
+### 🏆 Os 5 Projetos 100% Concluídos com Executável Autônomo (.EXE Standalone em Produção)
+
+Seguindo estritamente o nosso *Definition of Done*, 5 soluções atingiram a autonomia técnica plena, com aplicativos compilados em executáveis únicos (`.exe OneFile`) e operados diretamente pelos analistas de negócios do RH/DP com zero dependência de suporte técnico:
+
+1. **Gestão de Benefícios Multioperadoras (5 Fontes):** Interface CustomTkinter que cruza 5 bases e 6 operadoras (Hapvida, SulAmérica, GNDI, Klini, Unimed, Bradesco Odonto), eliminando cobranças indevidas de demitidos.
+2. **Gestão Integral de Férias (Motor v008):** Motor vetorial com 86 colunas de recálculo independente (recibo vs folha, médias e dobro CLT), reduzindo a conferência de 4 dias para 40 minutos.
+3. **Rescisão Trabalhista (*Shadow Calculation*):** Parser OCR estruturado de TRCTs em PDF via PDFPlumber com batimento de médias e saldo 721 em 30 segundos.
+4. **Operações & RPA — Seguro de Vida (Básico + 12x/24x):** App dedicado de conciliação de capitais segurados contra a folha e geração de remessa para a seguradora (MetLife/Alper).
+5. **Admissão & Cadastro — Censo Master (Primeiro App em Python):** Aplicação pioneira em Tkinter com terminal visual de logs e *auto-discovery* por prefixo para consolidação de 6 relatórios LG Lugar de Gente e saneamento de Salário Família.
 
 ---
 
