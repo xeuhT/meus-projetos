@@ -27,24 +27,25 @@ A suíte foi desenhada para **erradicar pagamentos indevidos, eliminar glosas co
 
 ---
 
-## 🗺️ Mapeamento Arquitetural Oficial (11 Macroáreas / 33 Frentes)
+## 🗺️ Mapeamento Arquitetural Oficial (12 Macroáreas / 33 Frentes)
 
-A arquitetura do ecossistema é distribuída em **11 macroáreas modulares e auditadas**, totalizando 33 frentes operacionais específicas (29 demandas consolidadas):
+A arquitetura do ecossistema é distribuída em **12 macroáreas modulares e auditadas**, totalizando 33 frentes operacionais específicas:
 
 | # | Macroárea | Escopo e Frentes Operacionais | Status do App Executável (.exe) / Interface | Horas Salvas / Mês |
 |:---:|:---|:---|:---:|:---:|
-| **01** | [🍱 Benefícios Corporativos (VA & VT)](modules/va_vt_18frentes/) | 18 frentes oficiais (Good Card, Compra VT, Teto 6%, Refeitório, Cencopay, Cesta Bretas) | 8 Frentes no `.exe` / 10 Frentes Entregues (aguardando validação final de regras) | **95,6h** |
-| **02** | [🏥 Gestão de Benefícios Multioperadoras](modules/beneficios_multioperadoras_5fontes/) | Cruzamento de 5 bases e 6 operadoras (Hapvida, SulAmérica, GNDI, Klini, Unimed, Bradesco Odonto) | ✅ **100% Concluído e em Uso Ativo** (App Desktop CustomTkinter) | **38,5h** |
-| **03** | [💳 Pagadoria & Fluxo de Caixa RH](modules/pagadoria_fluxo_caixa/) | Carga SAP ZFI051 & Alçadas (17,5h) + Projeção Preditiva de Fluxo de Caixa RH (13,2h) | Motor funcional pronto (pendente ajuste na aba de rateio para gerar `.exe`) | **30,7h** |
-| **04** | [💰 Folha de Pagamento & Encargos](modules/07_folha_e_encargos/) | Malha fina de eventos, gratificações atípicas e divergências líquidas da folha | Entregue no SharePoint (aguardando Folhas Especiais para compilar `.exe`) | **42,0h** |
-| **05** | [🏖️ Gestão Integral de Férias](modules/08_auditoria_ferias/) | Motor v008 vetorial de 86 colunas (confronto recibo vs folha, médias e dobro CLT em 40 min) | ✅ **100% Concluído e em Uso Ativo pela Equipe** (Executável `.exe OneFile`) | **31,3h** |
-| **06** | [📄 Rescisão Trabalhista (*Shadow Calculation*)](modules/09_conciliacao_rescisao/) | Leitor OCR/Parser de PDFs de TRCTs (PDFPlumber) e auditoria matemática de verbas | ✅ **100% Concluído e em Uso Contínuo** na rotina diária da analista | **39,0h** |
-| **07** | [🛡️ Compliance, SST & Afastados](modules/10_compliance_afastados/) | Robô SintegraWS para QSA/empresas ativas e óbitos (46,0h) + Auditoria INSS B91 (15,5h) | ✅ Laudo pericial em Word (.docx) e planilhas em produção | **61,5h** |
-| **08** | [🤝 Relações Sindicais & CCTs](modules/06_relacoes_sindicais/) | Robô de leitura de convenções coletivas no SharePoint e matriz de enquadramento | Entregue (aguardando validação para empacotar em `.exe`) | **15,7h** |
-| **09** | [⏱️ Ponto e Frequência](modules/05_ponto_e_frequencia/) | Auditoria de jornadas críticas (Art. 59 CLT), interjornada, atestados e DSR | Entregue (aguardando validação com a folha para compilar `.exe`) | **23,4h** |
-| **10** | [🌐 Operações & RPA Corporativo](modules/04_conectividade_social/) | Conectividade Social FGTS A1 (23,0h) + Ticket Plus (11,6h) + Seguro Vida MetLife (15,8h) | ✅ **100% Concluído** (RPA Selenium + App Seguro de Vida `.exe`) | **50,4h** |
-| **11** | [📊 Atração, Admissão & BI](modules/11_bi_pre_admissao/) | App Desktop Admissão/Salário Família (17,5h) + Dashboard Power BI Pré-Admissão & DHO (38,0h) | ✅ **App Admissão Concluído (.exe)** / **Power BI Integrado ao SharePoint** | **55,5h** |
-| **TOTAL** | **IMPACTO CONSOLIDADO DO ECOSSISTEMA** | **11 Macroáreas / 33 Frentes Operacionais Estruturadas** | **87,2% de Redução Média de Esforço Operacional** | **483,6h / mês** |
+| **01** | [🍱 Benefícios Corporativos (VA & VT)](modules/01_va_vt_18frentes/) | 18 frentes oficiais (Good Card, Compra VT, Teto 6%, Refeitório, Cencopay, Cesta Bretas) | 8 Frentes no `.exe` / 10 Frentes Entregues (aguardando validação final de regras) | **95,6h** |
+| **02** | [🏥 Gestão de Benefícios Multioperadoras](modules/02_beneficios_multioperadoras_5fontes/) | Cruzamento de 5 bases e 6 operadoras (Hapvida, SulAmérica, GNDI, Klini, Unimed, Bradesco Odonto) | ✅ **100% Concluído e em Uso Ativo** (App Desktop CustomTkinter) | **38,5h** |
+| **03** | [💳 Pagadoria & Fluxo de Caixa RH](modules/03_pagadoria_fluxo_caixa/) | Carga SAP ZFI051 & Alçadas (17,5h) + Projeção Preditiva de Fluxo de Caixa RH (13,2h) | Motor funcional pronto (pendente ajuste na aba de rateio para gerar `.exe`) | **30,7h** |
+| **04** | [💰 Folha de Pagamento & Encargos](modules/04_folha_e_encargos/) | Malha fina de eventos, gratificações atípicas e divergências líquidas da folha | Entregue no SharePoint (aguardando Folhas Especiais para compilar `.exe`) | **42,0h** |
+| **05** | [🏖️ Gestão Integral de Férias](modules/05_auditoria_ferias/) | Motor v008 vetorial de 86 colunas (confronto recibo vs folha, médias e dobro CLT em 40 min) | ✅ **100% Concluído e em Uso Ativo pela Equipe** (Executável `.exe OneFile`) | **31,3h** |
+| **06** | [📄 Rescisão Trabalhista (*Shadow Calculation*)](modules/06_conciliacao_rescisao/) | Leitor OCR/Parser de PDFs de TRCTs (PDFPlumber) e auditoria matemática de verbas | ✅ **100% Concluído e em Uso Contínuo** na rotina diária da analista | **39,0h** |
+| **07** | [🛡️ Compliance, SST & Afastados](modules/07_compliance_afastados/) | Robô SintegraWS para QSA/empresas ativas e óbitos (46,0h) + Auditoria INSS B91 (15,5h) | ✅ Laudo pericial em Word (.docx) e planilhas em produção | **61,5h** |
+| **08** | [🤝 Relações Sindicais & CCTs](modules/08_relacoes_sindicais/) | Robô de leitura de convenções coletivas no SharePoint e matriz de enquadramento | Entregue (aguardando validação para empacotar em `.exe`) | **15,7h** |
+| **09** | [⏱️ Ponto e Frequência](modules/09_ponto_e_frequencia/) | Auditoria de jornadas críticas (Art. 59 CLT), interjornada, atestados e DSR | Entregue (aguardando validação com a folha para compilar `.exe`) | **23,4h** |
+| **10** | [🌐 Operações & RPA Corporativo](modules/10_operacoes_rpa/) | Conectividade Social FGTS A1 (23,0h) + Ticket Plus (11,6h) + Seguro Vida MetLife (15,8h) | ✅ **100% Concluído** (RPA Selenium + App Seguro de Vida `.exe`) | **50,4h** |
+| **11** | [📋 Admissão & Cadastro (Censo Master)](modules/11_admissao_cadastro/) | Primeiro App Desktop em Python: auto-discovery de 6 relatórios LG e Salário Família | ✅ **100% Concluído e em Produção** (App Desktop Tkinter) | **17,5h** |
+| **12** | [📊 DHO & Recrutamento (Power BI)](modules/12_dho_recrutamento_powerbi/) | Dashboard Power BI em nuvem conectado ao SharePoint (Time-to-Hire, ASO e funil) | Em Validação Final / Homologação de colunas da planilha | **38,0h** |
+| **TOTAL** | **IMPACTO CONSOLIDADO DO ECOSSISTEMA** | **12 Macroáreas / 33 Frentes Operacionais Estruturadas** | **87,2% de Redução Média de Esforço Operacional** | **483,6h / mês** |
 
 ---
 
@@ -87,6 +88,8 @@ flowchart TD
         M06["📄 Parser OCR TRCT (PDFPlumber)"]
         M07["🛡️ Robô de Compliance & Afastados"]
         M10["🌐 RPA Selenium (Certificado Digital A1)"]
+        M11["📋 Admissão & Cadastro (Censo Master Tkinter)"]
+        M12["📊 DHO & Recrutamento (Power BI Nuvem)"]
         SHARED["🛠️ Anonimizador LGPD & Utilitários de Hash"]
     end
 
@@ -98,14 +101,14 @@ flowchart TD
         DOSSIES["📝 Dossiês Periciais em Word (.DOCX)"]
     end
 
-    LG --> M01 & M02 & M05 & M06 & M07
+    LG --> M01 & M02 & M05 & M06 & M07 & M11
     OPERADORAS --> M01 & M02
     PDFS --> M06
     APIS --> M07
     CAIXA --> M10
-    SHAREPOINT --> M03 & M07 & M10
+    SHAREPOINT --> M03 & M07 & M10 & M12
 
-    M01 & M02 & M03 & M05 & M06 & M07 & M10 & SHARED --> EXE & SAP_FILE & BI & REPORTS & DOSSIES
+    M01 & M02 & M03 & M05 & M06 & M07 & M10 & M11 & M12 & SHARED --> EXE & SAP_FILE & BI & REPORTS & DOSSIES
 ```
 
 ---

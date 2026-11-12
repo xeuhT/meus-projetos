@@ -8,18 +8,18 @@ Aracaju, SE - Brasil • [linkedin.com/in/matheus-cavalcanti-dos-santos-1ab69524
 ## 🎯 Título Profissional de Alto Impacto (*Headline*)
 
 * **Português:**  
-  `Especialista em Engenharia de Dados & Automação de Processos de RH (Python / RPA) | Redução Comprovada de +480h/mês (~3 FTEs) | Integração SAP • Power BI • Pandas • CustomTkinter • Selenium`
+  `Especialista em Engenharia de Dados & Automação de Processos de RH (Python / RPA) | Economia de +480h/mês (~3 FTEs) através de 33 Soluções | Integração SAP ZFI051 • Power BI • Pandas • CustomTkinter • Selenium`
 
 * **Inglês:**  
-  `Lead Data Engineer & HR Process Automation Specialist (Python / RPA) | Delivered +480h/mo Operational Savings (~3 FTEs) | SAP Integration • Power BI • Pandas • CustomTkinter • Selenium`
+  `Lead Data Engineer & HR Process Automation Specialist (Python / RPA) | Delivered +480h/mo Operational Savings (~3 FTEs) via 33 Python Solutions | SAP ZFI051 • Power BI • Pandas • CustomTkinter • Selenium`
 
 ---
 
-## 📌 Resumo Profissional Executivo (*Executive Summary*)
+## 📌 Resumo Profissional Executivo (*About / Executive Summary*)
 
-Engenheiro de Dados e Desenvolvedor de Automações Corporativas com sólida trajetória na transformação de gargalos operacionais e passivos de compliance em pipelines analíticos de alta performance. Bacharel em Ciência da Computação pelo Instituto Federal de Sergipe (IFS), com formação técnica em Automação Industrial pelo SENAI.
+Engenheiro de Dados e Especialista em Automação de Processos Corporativos (BPA / RPA) com sólida trajetória na transformação de gargalos operacionais massivos e passivos de compliance em pipelines analíticos escaláveis, resilientes e de alta performance. Bacharel em Ciência da Computação pelo Instituto Federal de Sergipe (IFS), com formação técnica em Automação Industrial pelo SENAI.
 
-Arquiteto e líder do desenvolvimento do ecossistema corporativo de auditoria contínua e inteligência de dados da Cencosud Brasil (11 macroáreas e 33 frentes operacionais em Python). O projeto alcançou uma **redução de 87,2% no tempo de fechamento operacional mensal (de ~555h para ~71h/mês), gerando uma economia auditada de 483,6 horas líquidas/mês — devolvendo a capacidade de 3,02 FTEs (~3 analistas sênior em tempo integral)** para tomadas de decisão estratégicas.
+Arquiteto e líder do desenvolvimento do ecossistema corporativo de auditoria contínua e inteligência de dados da Cencosud Brasil (**12 macroáreas e 33 frentes operacionais em Python**). O projeto alcançou uma **redução de 87,2% no tempo de fechamento mensal (de ~555h para ~71h/mês), gerando economia auditada de 483,6 horas líquidas/mês — devolvendo a capacidade de 3,02 FTEs (~3 analistas sênior em tempo integral)** para tomadas de decisão estratégicas.
 
 ---
 
@@ -29,17 +29,18 @@ Arquiteto e líder do desenvolvimento do ecossistema corporativo de auditoria co
 **Desenvolvedor Python | Engenharia de Dados & Automação de Processos (Sistemas de RH)**  
 *Maio de 2026 – Presente | Grande Aracaju / Brasil*
 
-Atuação com plena autonomia técnica na arquitetura, desenvolvimento e sustentação de 33 soluções de automação e engenharia de dados, processando massas de dados de múltiplos CNPJs em escala nacional:
+Atuação com plena autonomia técnica na concepção, arquitetura, desenvolvimento e sustentação de 33 soluções de automação e engenharia de dados, processando massas de dados de múltiplos CNPJs em escala nacional:
 
-* **Impacto Operacional & ROI de Negócio (+480h/mês / 3,02 FTEs):** Concepção e implantação de um ecossistema com 11 macroáreas em Python que reduziu em 87,2% o tempo de fechamento mensal de RH/DP, eliminando glosas de fornecedores e pagamentos indevidos.
-* **Desoneração de Faturas de Saúde & Multioperadoras (5 Fontes):** Engenharia de aplicação desktop corporativa em CustomTkinter com leitores polimórficos para 6 operadoras (Hapvida, SulAmérica, GNDI, Klini, Unimed, Bradesco Odonto), cruzando 5 bases (FOPAG, FOPA, Faturas e Nómina/Marsh) e erradicando cobranças indevidas de demitidos (*"vidas fantasmas"*), gerando economia de 38,5h/mês.
+* **Impacto Operacional & ROI de Negócio (+480h/mês / 3,02 FTEs):** Concepção e implantação de ecossistema com 12 macroáreas em Python que reduziu em 87,2% o tempo de fechamento mensal de RH/DP, eliminando glosas de fornecedores, multas trabalhistas e pagamentos indevidos.
+* **Admissão & Cadastro — Censo Master (Primeiro App Desktop em Python):** Concepção e entrega do primeiro aplicativo corporativo em Python da área, dotado de interface gráfica própria (Tkinter) e terminal visual de execução. Implementa *auto-discovery* por prefixo para localizar e cruzar 6 relatórios brutos do sistema LG Lugar de Gente (funcionários, dependentes, escalas, crachás, ponto e folha), gerando o Relatório Geral de Admissão e saneando a elegibilidade ao Salário Família (17,5h salvas/mês, 100% autônomo e em produção ativa há meses).
+* **Desoneração de Faturas de Saúde Multioperadoras (5 Fontes - 38,5h/mês):** Engenharia de aplicação desktop (CustomTkinter) com leitores polimórficos cruzando 5 bases contra faturas de 6 operadoras (Hapvida, SulAmérica, GNDI, Klini, Unimed, Bradesco Odonto), erradicando cobranças de demitidos (*"vidas fantasmas"*).
 * **Benefícios Corporativos & VA/VT (18 Frentes - 95,6h/mês):** Automação completa do fechamento mensal de benefícios (Good Card, VT, Cencopay, Refeitório, Cesta Bretas), reduzindo a esteira de conferências de 10 dias para 1 dia útil, além de motor analítico para cálculo de teto salarial de VT 6%.
-* **Pagadoria & Interface SAP ERP (ZFI051 - 30,7h/mês):** Desenvolvimento de consolidador de aprovações de pagamentos com validação de alçadas de governança corporativa e gerador do arquivo estruturado de carga massiva para a transação SAP ZFI051, além de motor preditivo de fluxo de caixa diário para a Tesouraria.
-* **Auditoria Contínua de Folha & Recálculo de Férias (v008):** Construção de motor vetorial em Pandas com 86 colunas e aplicação executável autônoma (`.exe OneFile`) homologada e em uso ativo pela equipe de negócios para recálculo independente (*shadow calculation*) de recibos de férias, médias e regras da CLT (Art. 134 e 137) em 40 minutos (ganho de 97,9%), além de malha fina de eventos atípicos da folha.
-* **Parsing de Rescisões em PDF (*Computer Vision / PDFPlumber*):** Pipeline de extração estruturada e conferência financeira de TRCTs em PDF, reduzindo o tempo de auditoria de 40 minutos para 30 segundos por rescisão (97,5% de ganho de produtividade).
-* **Compliance Previdenciário & Robô SintegraWS:** Pipeline via API REST para varredura em lote na Receita Federal de colaboradores afastados pelo INSS, identificando fraudes societárias em Quadro de Sócios e Administradores (QSA), acidentes de trabalho B91 e óbitos, com emissão automatizada de laudos periciais em Word (.docx).
-* **RPA Conectividade Social V2 (Selenium + Certificado A1):** Robô integrado à CryptoAPI do Windows para autenticação transparente com Certificado Digital A1 corporativo, automatizando em lote a emissão de extratos de FGTS da Caixa Econômica Federal.
-* **Business Intelligence & Esteira de Admissão:** App desktop de saneamento cadastral e admissão (.exe) em produção, somado à modelagem dimensional em Power BI (DAX avançado) integrada diretamente ao SharePoint para acompanhamento em tempo real de SLAs de contratação (*Time-to-Hire*), pendências de ASO e indicadores DHO.
+* **Pagadoria & Interface SAP ERP (ZFI051 - 30,7h/mês):** Desenvolvimento de consolidador de aprovações com alçadas de governança corporativa, gerador de arquivos estruturados de carga massiva para a transação SAP ZFI051 e motor preditivo de fluxo de caixa diário para a Tesouraria.
+* **Auditoria Contínua de Folha & Recálculo de Férias (v008 - 31,3h/mês):** Motor vetorial em Pandas com 86 colunas e aplicação executável autônoma (`.exe OneFile`) homologada e em uso ativo pela equipe para recálculo independente (*shadow calculation*) de recibos de férias, médias e regras da CLT em 40 minutos (ganho de 97,9%), além de malha fina de eventos da folha (42,0h/mês).
+* **Parsing de Rescisões em PDF (*Computer Vision / PDFPlumber* - 39,0h/mês):** Pipeline de extração estruturada e conferência financeira de TRCTs em PDF, reduzindo o tempo de auditoria de 40 minutos para 30 segundos por rescisão (97,5% de ganho de produtividade).
+* **Compliance Previdenciário & Robô SintegraWS (61,5h/mês):** Pipeline via API REST para varredura em lote na Receita Federal de colaboradores afastados pelo INSS, identificando fraudes societárias em Quadro de Sócios e Administradores (QSA), acidentes de trabalho B91 e óbitos, com emissão automatizada de laudos periciais em Word (.docx).
+* **RPA Conectividade Social V2 (Selenium + Certificado A1 - 23,0h/mês):** Robô integrado à CryptoAPI do Windows para autenticação transparente com Certificado Digital A1 corporativo, automatizando em lote a emissão de extratos de FGTS da Caixa Econômica Federal.
+* **DHO & Recrutamento — Dashboard Power BI (38,0h/mês):** Painel analítico gerencial em nuvem conectado diretamente à planilha do SharePoint corporativo, monitorando em tempo real tempos de ciclo (*Time-to-Hire*), gargalos de entrega de documentos e exames admissionais (ASO) para gerentes regionais e diretores.
 * **Autonomia Operacional (*Definition of Done*):** Desenvolvimento de executáveis autônomos (.exe OneFile) via PyInstaller, permitindo que as equipes operacionais executem os motores analíticos com zero dependência de suporte técnico.
 
 ---
